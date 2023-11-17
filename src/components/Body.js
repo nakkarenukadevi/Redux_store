@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { additem, datafetch } from "./utils/cartSlice";
+import About from "./About";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   let store_res = useSelector((state) => state.cart.data);
@@ -24,6 +26,7 @@ const Body = () => {
   const addCart = (item) => {
     dispatch(additem(item));
   };
+
   return (
     <div className="h-96 ">
       <div className="flex justify-around items-center">
@@ -45,7 +48,7 @@ const Body = () => {
                   <div className="text-center p-1">
                     Tating:{item.rating.rate}
                   </div>
-                  <div className="h-10 text-center py-3 px-4 bg-blue-800 text-white m-2">
+                  <div className="h-10 text-center py-3 px-4 bg-blue-800 text-white m-2 rounded-lg flex justify-center items-center">
                     <button
                       onClick={() => {
                         addCart(item);

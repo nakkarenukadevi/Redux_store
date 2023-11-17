@@ -5,6 +5,7 @@ import { Outlet, createBrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import Store from "./components/utils/Store";
 import Cart from "./components/Cart";
+import About from "./components/About";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ export let appLayOut = createBrowserRouter([
     children: [
       { path: "/", element: <Body /> },
       { path: "cart", element: <Cart /> },
+      { path: "about", element: <About /> },
     ],
   },
 ]);

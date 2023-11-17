@@ -13,7 +13,7 @@ const Headers = () => {
             Home
           </li>
         </Link>
-        <Link to="/">
+        <Link to="about">
           <li className="mx-5  hover:bg-blue-700 hover:block  p-5 hover:rounded-lg text-white hover:text-white font-bold">
             About
           </li>

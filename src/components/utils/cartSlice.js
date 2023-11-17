@@ -12,7 +12,15 @@ let cartSlice = createSlice({
     additem: (state, action) => {
       state.count.push(action.payload);
     },
+    removerItem: (state, action) => {
+      state.count = state.count.filter((item) => {
+        if (item.id === action.payload) {
+          return false;
+        }
+        return true;
+      });
+    },
   },
 });
-export let { datafetch, additem } = cartSlice.actions;
+export let { datafetch, additem, removerItem } = cartSlice.actions;
 export default cartSlice.reducer;
